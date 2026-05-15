@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sekai
+  namespace: sekai
+  labels:
+    app.kubernetes.io/name: sekai
+    app.kubernetes.io/part-of: sekai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sekai
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sekai
+        app.kubernetes.io/part-of: sekai
+    spec:
+      containers:
+        - name: sekai
+          # For production, pin to a version tag (e.g. ghcr.io/sekai-labs/sekai:v0.7.1)
+          image: ghcr.io/sekai-labs/sekai:latest
+          args: ["daemon"]
+          ports:
+            - name: gateway
+              containerPort: 42617
+              protocol: TCP
+          env:
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: sekai-api-key
+                  key: api-key
+            - name: LANG
+              value: "C.UTF-8"
+            - name: HOME
+              value: "/sekai-data"
+            - name: SEKAI_WORKSPACE
+              value: "/sekai-data/workspace"
+            - name: SEKAI_GATEWAY_PORT
+              value: "42617"
+          volumeMounts:
+            - name: state
+              mountPath: /sekai-data/.sekai
+            - name: config
+              mountPath: /sekai-data/.sekai/config.toml
+              subPath: config.toml
+              readOnly: true
+            - name: workspace
+              mountPath: /sekai-data/workspace
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "2"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: gateway
+            initialDelaySeconds: 10
+            periodSeconds: 60
+            timeoutSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: gateway
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 5
+          securityContext:
+            runAsNonRoot: true
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - ALL
+            seccompProfile:
+              type: RuntimeDefault
+      volumes:
+        - name: config
+          configMap:
+            name: sekai-config
+        - name: state
+          emptyDir: {}
+        - name: workspace
+          emptyDir: {}

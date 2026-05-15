@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  sekai:
+    image: ghcr.io/sekai-labs/sekai:0.7.5
+    restart: unless-stopped
+    environment:
+      - API_KEY=${API_KEY}
+      - PROVIDER=${PROVIDER:-openrouter}
+      - SEKAI_ALLOW_PUBLIC_BIND=true
+      - SEKAI_GATEWAY_PORT=42617
+    volumes:
+      - sekai-data:/sekai-data
+    expose:
+      - 42617
+volumes:
+  sekai-data: {}

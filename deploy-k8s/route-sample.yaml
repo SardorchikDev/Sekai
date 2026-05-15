@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: sekai
+  namespace: sekai
+  labels:
+    app.kubernetes.io/name: sekai
+    app.kubernetes.io/part-of: sekai
+spec:
+  to:
+    kind: Service
+    name: sekai
+    weight: 100
+  port:
+    targetPort: gateway
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

@@ -1,0 +1,13 @@
+{
+  "id": "sekai",
+  "name": "Sekai",
+  "version": "0.7.5",
+  "description": "Fast, small, and fully autonomous AI personal assistant infrastructure. Deploy anywhere, swap anything. 100% Rust.",
+  "logo": "sekai.png",
+  "links": {
+    "github": "https://github.com/sekai-labs/sekai",
+    "website": "https://sekai.com/",
+    "docs": "https://github.com/sekai-labs/sekai#readme"
+  },
+  "tags": ["ai", "self-hosted"]
+}

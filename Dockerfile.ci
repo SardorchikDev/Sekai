@@ -1,0 +1,32 @@
+# Dockerfile.ci — CI/release image using pre-built binaries.
+# Used by release workflows to skip the ~60 min Rust compilation.
+# The main Dockerfile is still used for local dev builds.
+
+# ── Runtime (Distroless) ─────────────────────────────────────
+FROM gcr.io/distroless/cc-debian13:nonroot@sha256:84fcd3c223b144b0cb6edc5ecc75641819842a9679a3a58fd6294bec47532bf7
+
+ARG TARGETARCH
+
+# Copy the pre-built binary for this platform (amd64 or arm64)
+COPY bin/${TARGETARCH}/sekai /usr/local/bin/sekai
+
+# Copy the web dashboard bundled alongside the binary in the release tarball.
+# Installed at /usr/share/sekailabs/web/dist (outside the documented
+# /sekai-data mount) so a bind mount on /sekai-data cannot shadow it
+# (#6400). The dashboard was decoupled from the binary in #5665 and is now
+# served from disk at `gateway.web_dist_dir`.
+COPY bin/${TARGETARCH}/web/dist /usr/share/sekailabs/web/dist
+
+# Runtime directory structure and default config
+COPY --chown=65534:65534 sekai-data/ /sekai-data/
+
+ENV LANG=C.UTF-8
+ENV SEKAI_WORKSPACE=/sekai-data/workspace
+ENV HOME=/sekai-data
+ENV SEKAI_GATEWAY_PORT=42617
+
+WORKDIR /sekai-data
+USER 65534:65534
+EXPOSE 42617
+ENTRYPOINT ["sekai"]
+CMD ["daemon"]

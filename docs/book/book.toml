@@ -1,0 +1,26 @@
+[book]
+title = "Sekai Docs"
+description = "Documentation for the Sekai personal AI assistant."
+authors = ["Sekai Labs"]
+language = "en"
+src = "src"
+
+[output.html]
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/sekai-labs/sekai"
+edit-url-template = "https://github.com/sekai-labs/sekai/edit/master/docs/book/{path}"
+site-url = "/"
+additional-js = ["theme/lang-switcher.js", "mermaid.min.js", "mermaid-init.js"]
+additional-css = ["theme/custom.css"]
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+
+[preprocessor.gettext]
+after = ["links"]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"

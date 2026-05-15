@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sekai
+  namespace: sekai
+  labels:
+    app.kubernetes.io/name: sekai
+    app.kubernetes.io/part-of: sekai
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: sekai
+  ports:
+    - name: gateway
+      port: 42617
+      targetPort: gateway
+      protocol: TCP

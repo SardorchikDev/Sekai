@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSCameraUsageDescription</key>
+    <string>Sekai needs camera access for photo capture automation.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Sekai needs microphone access for voice commands and audio recording.</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>Sekai needs speech recognition for voice transcription.</string>
+    <key>NSAppleEventsUsageDescription</key>
+    <string>Sekai needs Automation permission to control other applications via AppleScript.</string>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>Sekai needs Screen Recording to see what is on screen so the agent can act on the current context.</string>
+    <key>NSInputMonitoringUsageDescription</key>
+    <string>Sekai needs Input Monitoring to receive global hotkeys and observe user activity outside its own windows.</string>
+</dict>
+</plist>

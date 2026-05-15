@@ -1,0 +1,541 @@
+"docs":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "docs/**"
+          - "**/*.md"
+          - "**/*.mdx"
+          - "LICENSE"
+          - ".markdownlint-cli2.yaml"
+
+"dependencies":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "Cargo.toml"
+          - "Cargo.lock"
+          - "deny.toml"
+          - ".github/dependabot.yml"
+
+"ci":
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/**"
+          - ".githooks/**"
+
+"core":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/*.rs"
+
+"agent":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/agent/**"
+          - "crates/sekai-runtime/src/agent/**"
+
+"channel":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/**"
+          - "crates/sekai-channels/src/**"
+
+"channel:bluesky":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/bluesky.rs"
+          - "crates/sekai-channels/src/bluesky.rs"
+
+"channel:clawdtalk":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/clawdtalk.rs"
+          - "crates/sekai-channels/src/clawdtalk.rs"
+
+"channel:cli":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/cli.rs"
+          - "crates/sekai-channels/src/cli.rs"
+
+"channel:dingtalk":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/dingtalk.rs"
+          - "crates/sekai-channels/src/dingtalk.rs"
+
+"channel:discord":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/discord.rs"
+          - "src/channels/discord_history.rs"
+          - "crates/sekai-channels/src/discord.rs"
+          - "crates/sekai-channels/src/discord_history.rs"
+
+"channel:email":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/email_channel.rs"
+          - "src/channels/gmail_push.rs"
+          - "crates/sekai-channels/src/email_channel.rs"
+          - "crates/sekai-channels/src/gmail_push.rs"
+
+"channel:imessage":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/imessage.rs"
+          - "crates/sekai-channels/src/imessage.rs"
+
+"channel:irc":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/irc.rs"
+          - "crates/sekai-channels/src/irc.rs"
+
+"channel:lark":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/lark.rs"
+          - "crates/sekai-channels/src/lark.rs"
+
+"channel:linq":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/linq.rs"
+          - "crates/sekai-channels/src/linq.rs"
+
+"channel:matrix":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/matrix.rs"
+          - "crates/sekai-channels/src/matrix.rs"
+
+"channel:mattermost":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/mattermost.rs"
+          - "crates/sekai-channels/src/mattermost.rs"
+
+"channel:mochat":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/mochat.rs"
+          - "crates/sekai-channels/src/mochat.rs"
+
+"channel:mqtt":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/mqtt.rs"
+
+"channel:nextcloud-talk":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/nextcloud_talk.rs"
+          - "crates/sekai-channels/src/nextcloud_talk.rs"
+
+"channel:nostr":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/nostr.rs"
+          - "crates/sekai-channels/src/nostr.rs"
+
+"channel:notion":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/notion.rs"
+          - "crates/sekai-channels/src/notion.rs"
+
+"channel:qq":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/qq.rs"
+          - "crates/sekai-channels/src/qq.rs"
+
+"channel:reddit":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/reddit.rs"
+          - "crates/sekai-channels/src/reddit.rs"
+
+"channel:signal":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/signal.rs"
+          - "crates/sekai-channels/src/signal.rs"
+
+"channel:slack":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/slack.rs"
+          - "crates/sekai-channels/src/slack.rs"
+
+"channel:telegram":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/telegram.rs"
+          - "crates/sekai-channels/src/telegram.rs"
+
+"channel:twitter":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/twitter.rs"
+          - "crates/sekai-channels/src/twitter.rs"
+
+"channel:wati":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/wati.rs"
+          - "crates/sekai-channels/src/wati.rs"
+
+"channel:webhook":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/webhook.rs"
+          - "crates/sekai-channels/src/webhook.rs"
+
+"channel:wecom":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/wecom.rs"
+          - "crates/sekai-channels/src/wecom.rs"
+
+"channel:whatsapp":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/channels/whatsapp.rs"
+          - "src/channels/whatsapp_storage.rs"
+          - "src/channels/whatsapp_web.rs"
+          - "crates/sekai-channels/src/whatsapp.rs"
+          - "crates/sekai-channels/src/whatsapp_storage.rs"
+          - "crates/sekai-channels/src/whatsapp_web.rs"
+
+"gateway":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/gateway/**"
+          - "crates/sekai-gateway/src/**"
+
+"config":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/config/**"
+          - "crates/sekai-config/src/**"
+
+"cron":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/cron/**"
+          - "crates/sekai-runtime/src/cron/**"
+
+"daemon":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/daemon/**"
+          - "crates/sekai-runtime/src/daemon/**"
+
+"doctor":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/doctor/**"
+          - "crates/sekai-runtime/src/doctor/**"
+
+"health":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/health/**"
+          - "crates/sekai-runtime/src/health/**"
+
+"heartbeat":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/heartbeat/**"
+          - "crates/sekai-runtime/src/heartbeat/**"
+
+"integration":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/integrations/**"
+          - "crates/sekai-runtime/src/integrations/**"
+
+"memory":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/memory/**"
+          - "crates/sekai-memory/src/**"
+
+"security":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/security/**"
+          - "crates/sekai-runtime/src/security/**"
+
+"runtime":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/runtime/**"
+          - "crates/sekai-runtime/src/**"
+
+"onboard":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/onboard/**"
+          - "crates/sekai-runtime/src/onboard/**"
+
+"provider":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/**"
+          - "crates/sekai-providers/src/**"
+
+"provider:anthropic":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/anthropic.rs"
+          - "crates/sekai-providers/src/anthropic.rs"
+
+"provider:azure-openai":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/azure_openai.rs"
+          - "crates/sekai-providers/src/azure_openai.rs"
+
+"provider:bedrock":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/bedrock.rs"
+          - "crates/sekai-providers/src/bedrock.rs"
+
+"provider:claude-code":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/claude_code.rs"
+          - "crates/sekai-providers/src/claude_code.rs"
+
+"provider:compatible":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/compatible.rs"
+          - "crates/sekai-providers/src/compatible.rs"
+
+"provider:copilot":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/copilot.rs"
+          - "crates/sekai-providers/src/copilot.rs"
+
+"provider:gemini":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/gemini.rs"
+          - "src/providers/gemini_cli.rs"
+          - "crates/sekai-providers/src/gemini.rs"
+          - "crates/sekai-providers/src/gemini_cli.rs"
+
+"provider:glm":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/glm.rs"
+          - "crates/sekai-providers/src/glm.rs"
+
+"provider:kilocli":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/kilocli.rs"
+          - "crates/sekai-providers/src/kilocli.rs"
+
+"provider:ollama":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/ollama.rs"
+          - "crates/sekai-providers/src/ollama.rs"
+
+"provider:openai":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/openai.rs"
+          - "src/providers/openai_codex.rs"
+          - "crates/sekai-providers/src/openai.rs"
+          - "crates/sekai-providers/src/openai_codex.rs"
+
+"provider:openrouter":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/openrouter.rs"
+          - "crates/sekai-providers/src/openrouter.rs"
+
+"provider:telnyx":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/providers/telnyx.rs"
+          - "crates/sekai-providers/src/telnyx.rs"
+
+"service":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/service/**"
+          - "crates/sekai-runtime/src/service/**"
+
+"skillforge":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/skillforge/**"
+          - "crates/sekai-runtime/src/skillforge/**"
+
+"skills":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/skills/**"
+          - "crates/sekai-runtime/src/skills/**"
+
+"tool":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/**"
+          - "crates/sekai-tools/src/**"
+
+"tool:browser":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/browser.rs"
+          - "src/tools/browser_delegate.rs"
+          - "src/tools/browser_open.rs"
+          - "src/tools/text_browser.rs"
+          - "src/tools/screenshot.rs"
+          - "crates/sekai-tools/src/browser.rs"
+          - "crates/sekai-tools/src/browser_delegate.rs"
+          - "crates/sekai-tools/src/browser_open.rs"
+          - "crates/sekai-tools/src/text_browser.rs"
+          - "crates/sekai-tools/src/screenshot.rs"
+
+"tool:composio":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/composio.rs"
+          - "crates/sekai-tools/src/composio.rs"
+
+"tool:cron":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/cron_add.rs"
+          - "src/tools/cron_list.rs"
+          - "src/tools/cron_remove.rs"
+          - "src/tools/cron_run.rs"
+          - "src/tools/cron_runs.rs"
+          - "src/tools/cron_update.rs"
+
+"tool:file":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/file_edit.rs"
+          - "src/tools/file_read.rs"
+          - "src/tools/file_write.rs"
+          - "src/tools/glob_search.rs"
+          - "src/tools/content_search.rs"
+          - "crates/sekai-tools/src/file_edit.rs"
+          - "crates/sekai-tools/src/file_write.rs"
+          - "crates/sekai-tools/src/glob_search.rs"
+          - "crates/sekai-tools/src/content_search.rs"
+
+"tool:google-workspace":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/google_workspace.rs"
+          - "crates/sekai-tools/src/google_workspace.rs"
+
+"tool:mcp":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/mcp_client.rs"
+          - "src/tools/mcp_deferred.rs"
+          - "src/tools/mcp_protocol.rs"
+          - "src/tools/mcp_tool.rs"
+          - "src/tools/mcp_transport.rs"
+          - "crates/sekai-tools/src/mcp_client.rs"
+          - "crates/sekai-tools/src/mcp_deferred.rs"
+          - "crates/sekai-tools/src/mcp_protocol.rs"
+          - "crates/sekai-tools/src/mcp_tool.rs"
+          - "crates/sekai-tools/src/mcp_transport.rs"
+
+"tool:memory":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/memory_forget.rs"
+          - "src/tools/memory_recall.rs"
+          - "src/tools/memory_store.rs"
+          - "crates/sekai-tools/src/memory_forget.rs"
+          - "crates/sekai-tools/src/memory_recall.rs"
+          - "crates/sekai-tools/src/memory_store.rs"
+
+"tool:microsoft365":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/microsoft365/**"
+          - "crates/sekai-tools/src/microsoft365/**"
+
+"tool:shell":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/shell.rs"
+          - "src/tools/node_tool.rs"
+          - "src/tools/cli_discovery.rs"
+          - "crates/sekai-tools/src/cli_discovery.rs"
+
+"tool:sop":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/sop_advance.rs"
+          - "src/tools/sop_approve.rs"
+          - "src/tools/sop_execute.rs"
+          - "src/tools/sop_list.rs"
+          - "src/tools/sop_status.rs"
+
+"tool:web":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/web_fetch.rs"
+          - "src/tools/web_search_tool.rs"
+          - "src/tools/web_search_provider_routing.rs"
+          - "src/tools/http_request.rs"
+          - "crates/sekai-tools/src/web_fetch.rs"
+          - "crates/sekai-tools/src/web_search_tool.rs"
+          - "crates/sekai-tools/src/web_search_provider_routing.rs"
+          - "crates/sekai-tools/src/http_request.rs"
+
+"tool:security":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/security_ops.rs"
+          - "src/tools/verifiable_intent.rs"
+
+"tool:cloud":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tools/cloud_ops.rs"
+          - "src/tools/cloud_patterns.rs"
+          - "crates/sekai-tools/src/cloud_ops.rs"
+          - "crates/sekai-tools/src/cloud_patterns.rs"
+
+"tunnel":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/tunnel/**"
+          - "crates/sekai-runtime/src/tunnel/**"
+
+"observability":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "src/observability/**"
+          - "crates/sekai-runtime/src/observability/**"
+
+"tests":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "tests/**"
+
+"scripts":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "scripts/**"
+
+"dev":
+  - changed-files:
+      - any-glob-to-any-file:
+          - "dev/**"
